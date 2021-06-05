@@ -1,10 +1,9 @@
 #watch{
     position : relative;
     margin: auto;
-    border: 2px solid hotpink;
     height: 50vw;
     width : 50vw;
-    background: url(clock2.jpg) no-repeat;
+    background: url(clock.jpg) no-repeat;
     background-size: 100%;
 }
 #hour, #minute, #second{
