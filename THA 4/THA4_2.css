@@ -1,13 +1,35 @@
 #watch {
     position: relative;
     margin: auto;
+    margin-top: 100px;
     height: 40vw;
     width: 40vw;
     border: 5vw solid red;
     border-radius: 40vw;
 }
-
-#outerwatch {
+#skeleton {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: -7vw;
+    left: -7vw;
+    height: 50vw;
+    width: 50vw;
+    border: 2vw solid #0000001f;
+    border-radius: 50vw;
+}
+#skeleton2 {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: 0vw;
+    left: 0vw;
+    height: 36vw;
+    width: 36vw;
+    border: 2vw solid #00000014;
+    border-radius: 36vw;
+}
+/* #outerwatch {
     position: relative;
     display: inline-block;
     margin: auto;
@@ -29,7 +51,7 @@
     width: 38.5vw;
     border: 40px solid #755d5d2e;
     border-radius: 38.5vw;
-}
+} */
 
 #hour, #minute, #second{
     position: absolute;
