@@ -13,12 +13,12 @@
 }
 #cont1{
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */ /* be mand aaadmi uper display flex drakha hi and yaha inline block pagal kahike*/
     margin-left:2%;
 }
 #cont2 {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 15%;
     padding-right: 5%;
 }
@@ -32,7 +32,7 @@
 }
 .topmid {
     position: absolute;
-    display: inline-block;
+    /* display: inline-block; */
     justify-content: center;
     align-items: center;
     width: 20vw;
