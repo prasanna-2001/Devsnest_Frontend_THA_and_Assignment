@@ -1,0 +1,114 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+body{
+    margin: 0px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background:rgb(109, 109, 223);
+    color: white;
+    display:grid;
+    grid:
+    "header   header   header   header" auto
+    "........   lists     active    ......" auto /  /*auto is height ie t=fit the contentinit*/
+    1fr minmax(100px, 300px) minmax(250px, 500px) 1fr
+
+
+    
+}
+
+
+.heading{
+    grid-area: header;
+    text-align: center;
+    font-size: calc(7vw + 2rem);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.5);
+    margin: -0.2em 0 0.5em;
+}
+.maintasks{
+    grid-area: lists;
+}
+
+.task-list{
+    font-size: 1.2rem;
+    line-height: 2;
+    list-style:circle;
+    padding-left:1.1em;
+}
+
+form{
+    display: flex;
+}
+
+.btn{
+    cursor:pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+.btn.create{
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-right: 0.25em;
+    transition: opacity 250ms ease-in;
+}
+.btn.create:hover{
+    opacity: 0.7;
+}
+.new{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom:1px solid currentColor;
+    font-size: inherit;
+    width: 14vw;
+    outline: none;
+    transition: border-bottom 250ms ease-in;
+    order: 2;   /*iske liye hi form display flex kiya hai and order 2 kiya taki + buttn age aaye anbd line baadme*/
+}
+.new:focus{
+    border-bottom-width:3px;
+}
+.new:focus::placeholder{
+    opacity:0.5;
+}
+.new.list{
+    font-size: 1.1rem;
+}
+
+.active-list{
+    font-weight:700;
+}
+
+.subtasks{
+    --spacer: 2rem;
+    grid-area: active;
+    background: white;
+    color:  black;
+}
+
+.todo-header{
+    padding: var(--spacer);
+    background: #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.list-title{
+    margin:0 1em 0 0;
+}
+
+.task-count{
+    margin:0;
+    font-size: 1rem;
+}
+
+.todo-body{
+    padding: var(--spacer);
+}
