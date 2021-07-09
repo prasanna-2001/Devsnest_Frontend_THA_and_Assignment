@@ -1,7 +1,12 @@
 const listsContainer = document.querySelector('[data-lists]')
 const newListForm = document.querySelector('[data-new-list-form]')
 const newListInput = document.querySelector('[data-new-list-input]')
-const deleteListbButton = document.querySelector('[data-delete-list-button]');
+const deleteListButton = document.querySelector('[data-delete-list-button]');
+const listDisplayContainer = document.querySelector('[data-list-display-container]')
+const listTitleElement = document.querySelector('[data-list-title]')
+const listCountElement = document.querySelector('[data-list-count]')
+const taskContainer = document.querySelector('[data-tasks]')
+
 
 
 const LOCAL_STORAGE_LIST_KEY = 'task.lists' ; //adding . ie namespace helps to avoidndata repitition
@@ -12,12 +17,16 @@ let selectedListID = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY);
 
 listsContainer.addEventListener('click', e => {
     if(e.target.tagName.toLowerCase() === 'li'){
-       selectedListID = e.target.listId;
+       selectedListID = e.target.dataset.listId;
        saveAndRender();
     }
 })
 
-
+deleteListButton.addEventListener('click', e => {
+    lists = lists.filter(list => list.id !== selectedListID);
+    selectedListID = null;
+    saveAndRender();
+})
 
 newListForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -29,7 +38,7 @@ newListForm.addEventListener('submit', e => {
     saveAndRender();
 })
 function createList(name){
-    return { id: Date.now().toString() , name: name , task: []}
+    return { id: Date.now().toString() , name: name , tasks: []}
 }
 
 function saveAndRender(){
@@ -44,6 +53,27 @@ function save(){
 
 function render(){
     clearElement(listsContainer);
+    rendeLists();
+    const selectedList = lists.find(list => list.id === selectedListID)
+    if(selectedListID == null){
+        listDisplayContainer.style.display = 'none';
+    }
+    else{
+        listDisplayContainer.style.display = '';
+        listTitleElement.innerText =  selectedList.name;
+        renderTaskCount(selectedList)
+    }
+    
+}
+
+function renderTaskCount(selectedList){
+    const incompleteTaskCount = selectedList.tasks.filter(task => task.complete).length;
+    const taskString = incompleteTaskCount === 1 ? "subtask" : "subtasks";
+    listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining`;
+}
+
+
+function rendeLists(){
     lists.forEach(list => {
         const listElement = document.createElement('li');
         listElement.dataset.listId = list.id;
@@ -55,6 +85,7 @@ function render(){
         listsContainer.appendChild(listElement);
     })
 }
+
 
 function clearElement(element){
     while (element.firstChild) {
