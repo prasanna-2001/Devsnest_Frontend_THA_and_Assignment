@@ -1,0 +1,44 @@
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    border: 5px solid hotpink;
+    /* flex-wrap: wrap; */
+    margin-top: 2%;
+    
+}
+.matter{
+    margin-top: 10%;
+}
+#cont1{
+    position: relative;
+    /* display: inline-block; */ /* be mand aaadmi uper display flex drakha hi and yaha inline block pagal kahike*/
+    margin-left:2%;
+}
+#cont2 {
+    position: relative;
+    /* display: inline-block; */
+    margin-left: 15%;
+    padding-right: 5%;
+}
+.vl {
+    border-left: 6px solid rgb(247, 124, 230);
+    position: relative;
+    margin-left: 5%;
+    margin-top: 10%;
+    top: 42%;
+    margin-bottom: 5%;
+}
+.topmid {
+    position: absolute;
+    /* display: inline-block; */
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    text-align: center;
+    margin-top: -3%;
+    margin-left: 30%;
+    background: white;
+    text-size-adjust: auto;
+}

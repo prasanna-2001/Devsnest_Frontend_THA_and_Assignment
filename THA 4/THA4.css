@@ -1,0 +1,51 @@
+#watch{
+    position : relative;
+    margin: auto;
+    height: 50vw;
+    width : 50vw;
+    background: url(clock.jpg) no-repeat;
+    background-size: 100%;
+}
+#hour, #minute, #second{
+    position: absolute;
+    background:black;
+    border-radius: 10px;
+    transform-origin: bottom;  /* ye isliye kyu ki agr apn animaation oikse bina lgayenge to wo cemter 
+    ke aabout ieline ke midpoint ke abou rotate hoga and agr ye property lgaye to bottom ke about hoga*/
+
+}
+#hour {
+    width: 2%;
+    height: 24%;
+    top: 26%;
+    left: 48.9%;
+    opacity: 0.8;
+    animation: sec 12960000s steps(60,end) infinite ;
+    /* background-color: black; */
+    /* display: none; */
+}
+#minute {
+    width: 1.5%;
+    height: 30%;
+    top: 20%;
+    left: 49.1%;
+    opacity: 0.8;
+    animation: sec 3600s steps(60, end) infinite;
+    /* background-color: blue; */
+    /* display: none; */
+}
+#second {
+    width: 0.7%;
+    height: 40%;
+    top: 10%;
+    left: 49.50%;
+    opacity: 0.8;
+    animation: sec 60s steps(60,end) infinite;
+    /* background-color: hotpink; */
+    /* display: none; */
+}
+@keyframes sec{
+    to{
+        transform:rotate(360deg)
+    }
+}

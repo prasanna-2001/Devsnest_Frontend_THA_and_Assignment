@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script defer src="script.js"></script> defer is added to load the js after the page is downloaded -->
+</head>
+
+<body>
+    <h1 class="heading">To - Do List</h1>
+
+
+
+    <div class="maintasks">
+        <h2 class="task-list-title">Main tasks</h2>
+        <ul class="task-list" data-lists>
+            <!-- <li class="list-name active-list">Devsnest Work</li>
+            <li class="list-name">Practice</li>
+            <li class="list-name">Ghar ke kaams</li>
+            <li class="list-name">Entertainment</li> -->
+        </ul>
+        <form action="" data-new-list-form>
+            <input type="text" class="new list" data-new-list-input placeholder="new list name" aria-label="new list name">
+            <button class="btn create" aria-label="create new list">+</button>
+        </form>
+    </div>
+
+    
+
+
+
+    <div class="subtasks" data-list-display-container>
+        <div class="todo-header">
+            <h2 class="list-title" data-list-title>Devsnest work</h2>
+            <p class="task-count" data-list-count>3 Subtasks remaining</p>
+        </div>
+        
+        <div class="todo-body">
+            <div class="tasks" data-tasks>
+                <!--task1-->
+                <div class="task">
+                    <input type="checkbox" id="task-1">
+                    <label for="task-1">
+                    <span class="custom-checkbox"></span>
+                    Complete Tha</label>
+                </div>
+
+                <!--task2-->
+                
+                
+                <!--task3-->
+                <div class="task">
+                    <input type="checkbox" id="task-3">
+                    <label for="task-3">
+                    <span class="custom-checkbox"></span>
+                    learn concept of jquery</label>
+                </div>
+
+            </div>
+
+
+            <div class="new-task-creator">
+                <form action="">
+                    <input type="text" class="new task" placeholder="new task name" aria-label="new task name">
+                    <button class="btn create" aria-label="create new task">+</button>
+                </form>
+            </div>
+
+
+            <div class="delete-stuff">
+                <button class="btn delete">Clear task completyed</button>
+                <button class="btn delete" data-delete-list-button>Delete from list</button>
+    
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

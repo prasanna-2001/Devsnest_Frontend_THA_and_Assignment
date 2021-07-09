@@ -1,0 +1,98 @@
+#watch {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    height: 40vw;
+    width: 40vw;
+    border: 5vw solid red;
+    border-radius: 40vw;
+}
+#skeleton {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: -7vw;
+    left: -7vw;
+    height: 50vw;
+    width: 50vw;
+    border: 2vw solid #0000001f;
+    border-radius: 50vw;
+}
+#skeleton2 {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: 0vw;
+    left: 0vw;
+    height: 36vw;
+    width: 36vw;
+    border: 2vw solid #00000014;
+    border-radius: 36vw;
+}
+/* #outerwatch {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    top: -359px;
+    left: -359px;
+    height: 50vw;
+    width: 50vw;
+    border: 54px solid #00000029;
+    border-radius: 50vw;
+}
+
+#innerwatch {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    top: -3174px;
+    left: 7px;
+    height: 38.5vw;
+    width: 38.5vw;
+    border: 40px solid #755d5d2e;
+    border-radius: 38.5vw;
+} */
+
+#hour, #minute, #second{
+    position: absolute;
+    background:black;
+    border-radius: 10px;
+    transform-origin: bottom;  /* ye isliye kyu ki agr apn animaation oikse bina lgayenge to wo cemter 
+    ke aabout ieline ke midpoint ke abou rotate hoga and agr ye property lgaye to bottom ke about hoga*/
+
+}
+#hour {
+    width: 2%;
+    height: 24%;
+    top: 26%;
+    left: 48.9%;
+    opacity: 0.8;
+    animation: sec 12960000s steps(60,end) infinite ;
+    /* background-color: black; */
+    /* display: none; */
+}
+#minute {
+    width: 1.5%;
+    height: 30%;
+    top: 20%;
+    left: 49.1%;
+    opacity: 0.8;
+    animation: sec 3600s steps(60, end) infinite;
+    /* background-color: blue; */
+    /* display: none; */
+}
+#second {
+    width: 0.7%;
+    height: 40%;
+    top: 10%;
+    left: 49.50%;
+    opacity: 0.8;
+    animation: sec 60s steps(60,end) infinite;
+    /* background-color: hotpink; */
+    /* display: none; */
+}
+@keyframes sec{
+    to{
+        transform:rotate(360deg)
+    }
+}
