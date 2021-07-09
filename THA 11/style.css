@@ -50,3 +50,38 @@ body{
     border-radius: 4vh;
     /* border: 3px solid black; */
 }
+.correct{
+    background-color:green;
+    height: 12vh;
+    width: 30vw;
+    /* left: 10vh; */
+    margin: 2vw;
+    font-size: 8vh;
+    position: relative;
+    border-radius: 4vh;
+}
+.not_correct{
+    background-color:red;
+    height: 12vh;
+    width: 30vw;
+    /* left: 10vh; */
+    margin: 2vw;
+    font-size: 8vh;
+    position: relative;
+    border-radius: 4vh;
+}
+.result {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30vh;
+    left: 59vw;
+    height: 15vh;
+    width: 39vw;
+    background-color: white;
+    border: 1rem solid black;
+    font-size: 5vh;
+    border-radius: 4rem;
+}
