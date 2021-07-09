@@ -39,6 +39,15 @@ body{
     padding-left:1.1em;
 }
 
+.list-name{
+    cursor: pointer;
+}
+
+.list-name:hover{
+    opacity: 0.7;
+}
+
+
 form{
     display: flex;
 }
@@ -59,10 +68,20 @@ form{
 .btn.create:hover{
     opacity: 0.7;
 }
+.btn.delete{
+    /* font-size: 1em; */
+    font-weight: 800;
+
+}
+.btn.delete:hover{
+    color: red;
+}
 .new{
     background: transparent;
     border: 0;
     color: inherit;
+    padding: 0.25em;
+
     border-bottom:1px solid currentColor;
     font-size: inherit;
     width: 14vw;
@@ -70,18 +89,27 @@ form{
     transition: border-bottom 250ms ease-in;
     order: 2;   /*iske liye hi form display flex kiya hai and order 2 kiya taki + buttn age aaye anbd line baadme*/
 }
+.new::placeholder{
+    opacity: 0.5;
+    color: currentColor;
+}
 .new:focus{
     border-bottom-width:3px;
 }
 .new:focus::placeholder{
-    opacity:0.5;
+    opacity:0.25;
+    color: currentColor;
 }
 .new.list{
     font-size: 1.1rem;
 }
 
+.new.task{
+    margin-bottom: 0;
+}
+
 .active-list{
-    font-weight:700;
+    font-weight:900;
 }
 
 .subtasks{
@@ -111,4 +139,102 @@ form{
 
 .todo-body{
     padding: var(--spacer);
+    position: relative;
 }
+
+.new-task-creator .create{
+    color: rgb(109, 109, 223) ;;
+}
+
+[type="checkbox"]{
+    opacity: 0;
+   /* visibility: hidden; */
+    position: absolute;
+}
+
+.task label{
+    /* display: inline-block; */
+    display:inline-flex;
+
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5em
+    
+}
+.task{
+    position: relative;
+    margin-bottom: 0.2em;
+}
+
+.task::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0.9em;
+    height: 1px;
+    /* width:20vw; */
+   
+    background: currentColor;
+    opacity: 0.1;
+}
+
+
+.custom-checkbox{
+    --size:0.50em;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    margin-right: var(--size);
+    cursor: pointer;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    transform: scale(1);
+    transition:transform 300ms ease-in-out;
+
+}
+.task:hover .custom-checkbox,
+[type = "checkbox"]:focus + label .custom-checkbox{
+    transform:scale(1.2);
+    color:rgb(109, 109, 223) ;
+}
+
+[type = "checkbox"]:checked +  label .custom-checkbox{
+    background:rgb(109, 109, 223) ;
+    border-color:rgb(109, 109, 223) ;
+    box-shadow: inset 0 0 0px 2px white;/*to fix the prolem of big smaal*/ /*plus douboe border added*/
+}
+
+[type="checkbox"]:checked + label {
+    opacity: 0.5;
+}
+.task label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right:0;
+    /* top:50%; */
+    height: 2px;
+    margin-left: 1.2em;
+    background: currentColor;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform 300ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.delete-stuff{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -35px;
+    /* align-items: center; */
+    color: currentColor;
+}
+
