@@ -1,0 +1,25 @@
+.hoverbox {
+    position:relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    margin: 20px;
+}
+
+.clickbox {
+    position: absolute;
+    width: 100px;
+    display: inline-block;
+    top: 9px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+}
+input {
+    display:block;
+}
+#subbtn{
+    position: absolute;
+    top:25vh;
+}
