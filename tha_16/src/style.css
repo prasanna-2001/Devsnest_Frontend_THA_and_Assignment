@@ -33,6 +33,7 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    /* border: 10px solid black; */
 }
 /* .black{
     display: inline-block;
@@ -55,7 +56,10 @@
 } 
 .unit:nth-child(even){
     background: white;
+    border: 1px solid black;
 }
 .unit:nth-child(odd){
     background: black;
+    border: 1px solid black;
+
 }
