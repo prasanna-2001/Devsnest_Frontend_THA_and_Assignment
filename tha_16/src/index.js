@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import App from "./app";
+
+
 
 ReactDom.render(
-    <h1>Hello World</h1>,
+   <App></App>,               //can be written as<App/> as no data si passed oin between
     document.getElementById('root')
 )
