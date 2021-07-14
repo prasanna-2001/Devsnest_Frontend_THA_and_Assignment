@@ -1,0 +1,40 @@
+.App{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.chessboard {
+    /* position: absolute; */
+    height: 400px;
+    padding: 80px 10px;
+    display: inline-block;
+    width: 400px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 10px solid black; */
+}
+
+.unit{
+    height: 50px;
+    width: 50px;
+    margin: 1px; 
+
+   
+} 
+.unit:nth-child(even){
+    background: white;
+    border: 1px solid black;
+}
+.unit:nth-child(odd){
+    background: black;
+    border: 1px solid black;
+
+}
