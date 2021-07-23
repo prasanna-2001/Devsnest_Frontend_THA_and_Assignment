@@ -20,3 +20,12 @@
     border: 1px solid black;
     /* background-repeat: no-repeat; */
 }
+.meme{
+    text-align: center;
+}
+.meme img{
+    width: auto;
+    height: 500px ;
+    border: 1px solid black;
+
+}
