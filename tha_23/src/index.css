@@ -1,0 +1,20 @@
+.App{
+    background-color: rgb(119, 82, 187);
+    height: 800px;
+    width: 800px;
+}
+.ip{
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 350px;
+}
+.addbtn{
+    position: relative;
+    left:400px;
+}
+/* .originallist{
+    left: 400px;
+    position: relative;
+} */

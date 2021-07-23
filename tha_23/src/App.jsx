@@ -16,16 +16,17 @@
 // export default App;
 
 
-// import './App.css';
+import './index.css';
 import {useArray} from './useArray'
 import {useState} from 'react'
 function App() {
-  const todos = useArray(["buy milk","buy coffeee"]);
+  const todos = useArray(["DEVSNEST THA23","college webinar","aur to kuch ni"]);
   const [item,setItem] = useState(null);
   return (
     <div className="App">
-      <input value = {item} onChange={(e)=>{setItem(e.target.value); console.log(item);}}></input>
-      <button onClick={(e)=>{
+    <div><h1>offooo...  ONE  MORE TODO</h1></div>  
+      <input value = {item} onChange={(e)=>{setItem(e.target.value); console.log(item);}} className="ip"></input>
+      <button className="addbtn" onClick={(e)=>{
         todos.add(item);
         setItem("")
       }}>Add</button>
@@ -33,7 +34,7 @@ function App() {
       {
         todos.values.map((todo,index) => {
            return (
-           <li key={index}>{todo} <button onClick={()=>{todos.delete(index)}}>delete</button></li>
+           <li key={index}>{todo} <button onClick={()=>{todos.delete(index)}} className="originallist">delete</button></li>
            )
         })
       }
