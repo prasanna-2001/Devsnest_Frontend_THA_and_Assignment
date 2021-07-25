@@ -13,7 +13,7 @@
 // export default App;
 
 
-import './App.css';
+import './Style.css';
 import {
   BrowserRouter as Router,
   Route,
